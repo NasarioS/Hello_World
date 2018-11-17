@@ -19,66 +19,13 @@ public class Driver{
         stringList.add("No No Noooooooo");
         Predicate<Integer> []checkI = new Predicate[3];
         Predicate<String> []checkS = new Predicate[3];
-        checkI[0] = new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer num) {
-                if(num == 1981)
-                    return true;
-                return false;
-            }
-        };
-        checkI[1] = new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer num) {
-                if(num == 1997)
-                    return true;
-                return false;
-            }
-        };
-        checkI[2] = new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer num) {
-                if(num == 2003)
-                    return true;
-                return false;
-            }
-        };
-        checkS[0] = new Predicate<String>() {
-            @Override
-            public boolean test(String s) {
-                if(s == "Lava Pit")
-                    return true;
-                else
-                    return false;
-            }
-        };
-        checkS[1] = new Predicate<String>() {
-            @Override
-            public boolean test(String s) {
-                if(s == "Adorable")
-                    return true;
-                else
-                    return false;
-            }
-        };
-        checkS[2] = new Predicate<String>() {
-            @Override
-            public boolean test(String s) {
-                if(s == "Where are You")
-                    return true;
-                else
-                    return false;
-            }
-        };
-        checkS[0] = new Predicate<String>() {
-            @Override
-            public boolean test(String s) {
-                if(s == "Lava Pit")
-                    return true;
-                else
-                    return false;
-            }
-        };
+        checkI[0]  = (num)-> num == 1981;
+        checkI[1] = (num)-> num == 1997;
+        checkI[2] = (num)-> num == 2005;
+        checkS[0] = (s)-> s == "Lava Pit";
+        checkS[1] = (s) -> s == "Adorable";
+        checkS[2] = (s) -> s == "Where are You";
+
 
         for(int i = 0; i < 3; i++) {
             print(linearSearch(intList, checkI[i]), intList);
